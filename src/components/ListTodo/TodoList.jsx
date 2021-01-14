@@ -4,11 +4,13 @@ import Todo from '../Todo/Todo'
 import './ListTodo.css'
 
 const TodoList = ({ todos, onTodoClick }) => (
-  <ul className='Alltasks'>
-    {todos.map(todo => (
-      <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} />
-    ))}
-  </ul>
+  <div className='list_container'>
+    <ul className='Alltasks'>
+      {todos.map(todo => (
+        <Todo key={todo.id} {...todo} onClick={() => onTodoClick(todo.id)} />
+      ))}
+    </ul>
+  </div>
 )
 
 TodoList.propTypes = {
